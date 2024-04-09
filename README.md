@@ -9,3 +9,5 @@ Desenvolvimento de um website básico, utilizando as seguintes linguagens:
 HTML;
 CSS;
 Javascript.
+
+Usei o https://jsfiddle.net/ para fazer testes nos arquivos, recomendo.
