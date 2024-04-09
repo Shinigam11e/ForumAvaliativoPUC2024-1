@@ -1,0 +1,47 @@
+Vamos supor que duas pessoas estejam trabalhando no mesmo arquivo CSS e ambas façam alterações conflitantes na mesma linha. Aqui está um exemplo:
+
+:root {
+  --bg-color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+}
+
+h1 {
+  color: black; /* Alteração feita por uma pessoa */
+}
+Supondo que outra pessoa também fez uma alteração na mesma linha, mas definiu a cor do título (h1) como azul:
+
+h1 {
+  color: blue; /* Alteração feita por outra pessoa */
+}
+
+Quando essas alterações forem mescladas, um conflito de merge ocorrerá, porque ambas as alterações tentam modificar a mesma linha do código. O Git não consegue decidir qual alteração manter automaticamente e, portanto, solicitará que o usuário resolva manualmente o conflito. Isso geralmente é feito editando o arquivo diretamente para escolher qual versão das alterações manter e qual descartar.
+
+
